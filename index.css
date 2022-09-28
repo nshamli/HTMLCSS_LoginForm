@@ -1,0 +1,106 @@
+body{
+    background-color: #2A2734;
+}
+form{
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    color:#FFB870;
+    width:211px;
+    height:34px;
+    font-family: 'Avenir';
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+input{
+    box-sizing: border-box;
+    width: 326px;
+    height: 35px;
+    background: #9A86FD;
+    border:1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0,25); 
+    border-radius: 25px;
+    color: white;
+    padding-left: 5px;
+    transition:all .5s;
+}
+
+input:focus{
+    outline: none;
+    box-shadow: 0 0 15px #FFB870;
+}
+button{
+     display: none;
+    width: 40px;
+    height: 100%;
+    background: #9A86FD;
+    border-radius: 25px;
+    color:white;
+    border:0;
+    margin-left: 5px;;
+    cursor: pointer;
+    box-shadow: o 4px 4px rgba(0,0,0,0,25);
+    transition: all .5s;
+}
+
+button:hover{
+    box-shadow: 0 0 15px #FFB870;
+}
+.container{
+    margin-top:30px;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+.valid{
+    display: block;
+    animation: valid 1s forwards;
+}
+.fa-spinner{
+    width: 20px;
+    font-size: large;
+    margin: auto;
+    color:#FFB870;
+    animation: spin 2s infinite;
+}
+#check{
+    display: none;
+    width: 20px;
+    font-size: large;
+    margin: auto;
+    color:green;
+}
+
+.invalid{
+    display: none;
+    color:red;
+    font-family: 'Avenir';
+    font-style: normal;
+    font-size: 14px;
+    margin-left: 15px;
+}
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes valid {
+    from{
+        width:40px;
+    }
+    to{
+        width: 100px;
+    }
+}
